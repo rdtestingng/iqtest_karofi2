@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chọn đề ngẫu nhiên</title>
+    <script>
+        window.onload = function() {
+            // Danh sách link đến các Google Form
+            const forms = [
+                "https://forms.gle/9YfkDntEGs3M4Kfs6", // Thay bằng link Form 1
+                "https://forms.gle/DQSNgGPGPneF9v1J9", // Thay bằng link Form 2
+                
+            ];
+
+            // Chọn ngẫu nhiên một link
+            const randomForm = forms[Math.floor(Math.random() * forms.length)];
+
+            // Chuyển hướng người dùng
+            window.location.href = randomForm;
+        };
+    </script>
+</head>
+<body>
+    <h1>Đang chọn đề...</h1>
+    <p>Nếu bạn không được chuyển hướng, hãy <a id="manualLink" href="#">bấm vào đây</a>.</p>
+    <script>
+        const forms = [
+            "https://forms.gle/9YfkDntEGs3M4Kfs6", // Thay bằng link Form 1
+            "https://forms.gle/DQSNgGPGPneF9v1J9", // Thay bằng link Form 2
+  
+        ];
+        document.getElementById('manualLink').href = forms[Math.floor(Math.random() * forms.length)];
+    </script>
+</body>
+</html>
+
+
